@@ -14,7 +14,9 @@ app.use(express.json())
 app.use('',publicRoute)
 app.use('/users',userRoute)
 db.sequelize.sync()
-
+app.get('/',(req,res)=>{
+  console.log("Welcome , Jasim Uddin")
+})
 const port = process.env.PORT || 3306;
 app.listen(port, () => {
     console.log('listening from port', port);
